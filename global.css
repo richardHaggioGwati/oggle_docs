@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    line-height: normal;
+}
+
+:root {
+    /* fonts */
+    --font-gilroy-extrabold: Gilroy-ExtraBold;
+    --font-gilroy-medium: Gilroy-Medium;
+    --font-arial: Arial;
+
+    /* font sizes */
+    --font-size-sm: 0.875rem;
+    --font-size-smi: 0.813rem;
+
+    /* Colors */
+    --color-darkslategray: #333;
+    --color-white: #fff;
+    --color-silver: #bfbfbf;
+    --color-tomato: #e94235;
+    --color-blue: #167aae;
+
+    /* Gaps */
+    --gap-base: 1rem;
+    --gap-5xl: 1.5rem;
+    --gap-5xs: 0.5rem;
+
+    /* Paddings */
+    --padding-4xs: 0.562rem;
+    --padding-base: 1rem;
+
+    /* Border radiuses */
+    --br-9xl-5: 28.5px;
+    --br-9xs: 4px;
+}
