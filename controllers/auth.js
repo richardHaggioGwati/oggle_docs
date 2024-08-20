@@ -16,8 +16,7 @@ const register = async (req, res) => {
 		}
 		const user = await User.create({ name, email, password });
 		const token = user.createJWT();
-
-		return res.status(StatusCodes.CREATED).redirect('/static/pages/document.html').json({ user: { name: user.name }, token });
+        return res.status(StatusCodes.CREATED).redirect('/pages/dashboard.html').json({ user: { name: user.name }, token })
 	} catch (error) {
 		console.error('Registration error:', error);
 		return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ error: 'Internal Server Error' });
@@ -40,7 +39,7 @@ const login = async (req, res) => {
     }
     // compare password
     const token = user.createJWT()
-    res.status(StatusCodes.OK).json({user: {name: user.name}, token}).redirect('/static/pages/document.html')
+    res.status(StatusCodes.OK).json({user: {name: user.name}, token}).redirect('/pages/dashboard.html')
 }
 
 module.exports = {
