@@ -12,7 +12,6 @@ const authenticateUser  = async (request, response, next) => {
 
     try {
         const payload = jwt.verify(token, process.env.JWT_SECRET)
-          // attach the user to the routes
           req.user = { userId: payload.userId, name: payload.name }
           next()
     } catch (error) {
