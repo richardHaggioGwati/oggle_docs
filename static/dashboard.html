@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="./public/favicon.ico" />
+		<link rel="stylesheet" href="./styles/dashboard.css" />
+		<title>Dashboard</title>
+	</head>
+	<body>
+		<header>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				id="userIcon"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+				<circle cx="12" cy="7" r="4"></circle>
+			</svg>
+			<h1 id="username"></h1>
+
+			<div id="modal" class="modal">
+				<div class="modal-content">
+					<span class="close-button">&times;</span>
+					<h2>Menu</h2>
+					<ul>
+						<li><a>Settings</a></li>
+						<li><a>Export</a></li>
+						<li id="logoutButton"><a>Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<h2 class="section-title">Start a new document</h2>
+
+			<div class="template-grid">
+				<div class="template-card blank">
+					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+					</svg>
+					Blank
+				</div>
+
+				<div class="template-card">
+					<img
+						class="thumbnail"
+						src="./public/templates/report.webp"
+						alt="Report template"
+					/>
+					<div class="name">Report</div>
+				</div>
+
+				<div class="template-card">
+					<img
+						class="thumbnail"
+						src="./public/templates/proposal.webp"
+						alt="Proposal template"
+					/>
+					<div class="name">Proposal</div>
+				</div>
+
+				<div class="template-card">
+					<img
+						class="thumbnail"
+						src="./public/templates/letter.png"
+						alt="Letter template"
+					/>
+					<div class="name">Letter</div>
+				</div>
+
+				<div class="template-card">
+					<img
+						class="thumbnail"
+						src="./public/templates/resume.webp"
+						alt="Resume template"
+					/>
+					<div class="name">Resume</div>
+				</div>
+			</div>
+
+			<h2 class="section-title">Recent documents</h2>
+
+			<div class="documents-list">
+				<div class="document">
+					<img
+						class="icon"
+						src="./public/templates/report.webp"
+						alt="Document icon"
+					/>
+					<div class="name">Quarterly Report</div>
+				</div>
+
+				<div class="document">
+					<img
+						class="icon"
+						src="./public/templates/plan.webp"
+						alt="Document icon"
+					/>
+					<div class="name">Project Plan</div>
+				</div>
+
+				<div class="document">
+					<img
+						class="icon"
+						src="./public/templates/buget.webp"
+						alt="Spreadsheet icon"
+					/>
+					<div class="name">Budget</div>
+				</div>
+			</div>
+		</main>
+
+		<script src="./browser-app.js"></script>
+		<script src="./js/dashboard.js"></script>
+	</body>
+</html>
