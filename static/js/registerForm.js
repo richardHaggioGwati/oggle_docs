@@ -48,23 +48,22 @@ function submit() {
 	})
 		.then((response) => {
 			if (response.ok) {
-				if (response.redirected) {
-					window.location.href = response.url;
-				} else {
-					return response.json();
-				}
+				return response.json();
 			} else {
 				return response.json().then((data) => {
-					throw new Error(data.error || 'Failed to register');
+					throw new Error(data.error);
 				});
 			}
 		})
 		.then((data) => {
-			if (data && data.error) {
-				displayErrors([data.error]);
-			}
+			localStorage.setItem('token', data.token);
+			localStorage.setItem('username', data.user.name);
+
+			//redirect
+			window.location.href = '/dashboard.html';
 		})
 		.catch((error) => {
+			console.error('Registration failed:', error);
 			displayErrors([error.message || 'An error occurred. Please try again.']);
 		});
 }
