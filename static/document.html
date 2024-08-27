@@ -11,13 +11,27 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.1.0/docx.min.js"></script>
+		<link rel="stylesheet" href="./global.css" />
 		<link rel="stylesheet" href="./styles/document.css " />
 		<title>Document</title>
 	</head>
 	<body>
 		<div id="header">
-			<div id="logo">Docs</div>
-			<div id="account-icon">U</div>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				id="userIcon"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+				<circle cx="12" cy="7" r="4"></circle>
+			</svg>
 		</div>
 		<div id="toolbar">
 			<input
@@ -29,7 +43,7 @@
 			<button class="toolbar-btn" id="undo-btn" title="Undo"
 				><i class="fas fa-undo"></i
 			></button>
-			<button class="toolbar-btn" id="redo-btn" title="Undo"
+			<button class="toolbar-btn" id="redo-btn" title="Redo"
 				><i class="fas fa-redo"></i
 			></button>
 			<button class="toolbar-btn" id="print" title="Print"
@@ -89,15 +103,15 @@
 			<button class="toolbar-btn" data-command="insertLink" title="Insert-link"
 				><i class="fas fa-link"></i
 			></button>
-			<button class="toolbar-btn" data-command="insertImage" title="Insert-image"
+			<button
+				class="toolbar-btn"
+				data-command="insertImage"
+				title="Insert-image"
 				><i class="fas fa-image"></i
 			></button>
 
 			<div class="divider"></div>
-			<button
-				class="toolbar-btn"
-				data-command="bulletList"
-				title="Bullet List"
+			<button class="toolbar-btn" data-command="bulletList" title="Bullet List"
 				><i class="fas fa-list"></i
 			></button>
 
