@@ -1,26 +1,3 @@
-:root {
-	/* font sizes */
-	--font-size-sm: 0.875rem;
-	--font-size-smi: 0.813rem;
-
-	/* Colors */
-	--color-white: #fff;
-	--color-blue: #4285f4;
-
-	/* Gaps */
-	--gap-base: 1rem;
-	--gap-5xl: 1.5rem;
-	--gap-5xs: 0.5rem;
-
-	/* Paddings */
-	--padding-4xs: 0.562rem;
-	--padding-base: 1rem;
-
-	/* Border radiuses */
-	--br-9xl-5: 28.5px;
-	--br-9xs: 4px;
-}
-
 body {
 	font-family: sans-serif;
 	display: flex;
